@@ -9,7 +9,6 @@ export const Provider = ({ children }) => {
 
     const [pizzas, setPizzas] = useState([]);
     const [prevCarrito, setPrevCarrito] = useState([]);
-    const [total, setTotal] = useState(0);
 
     const endpoint = "/pizzas.json"
 
@@ -27,7 +26,7 @@ export const Provider = ({ children }) => {
     }, []);
 
 
-    const globalState = { pizzas, prevCarrito, setPrevCarrito, total, setTotal }
+    const globalState = { pizzas, prevCarrito, setPrevCarrito }
 
     return <Context.Provider value={globalState}>
         {children}

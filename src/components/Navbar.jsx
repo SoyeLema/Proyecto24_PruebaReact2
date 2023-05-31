@@ -8,7 +8,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Navbar() {
 
-    const { total } = useContext(Context)
+    const { prevCarrito } = useContext(Context)
+
+    const total = prevCarrito.reduce((a, { price, count }) => a + price * count, 0);
+
 
     const setActiveClass = ({ isActive }) => (isActive ? "active" : "inactive")
 

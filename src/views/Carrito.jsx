@@ -8,15 +8,13 @@ import "../assets/carrito.css"
 
 export default function Carrito() {
 
-    const { pizzas, prevCarrito, setPrevCarrito, total, setTotal } = useContext(Context)
+    const { prevCarrito, setPrevCarrito, } = useContext(Context);
 
+    const total = prevCarrito.reduce((a, { price, count }) => a + price * count, 0);
 
     const increment = (i) => {
         prevCarrito[i].count++;
         setPrevCarrito([...prevCarrito]);
-        setTotal(
-            prevCarrito.reduce((a, { i, count }) => a + i.price * count, price)
-        );
     };
 
     const decrement = (i) => {
@@ -27,9 +25,6 @@ export default function Carrito() {
             prevCarrito[i].count--;
         }
         setPrevCarrito([...prevCarrito]);
-        setTotal(
-            prevCarrito.reduce((a, { price, count }) => a - price * count, price)
-        );
     };
 
     const vaciarCarrito = () => {
@@ -62,7 +57,7 @@ export default function Carrito() {
                                             <tr className="d-flex justify-content-end align-items-center">
                                                 <td>
                                                     {" "}
-                                                    <p className="text-success m-0">${(item.price).toLocaleString()}</p>
+                                                    <p className="text-success m-0">${(item.price * item.count).toLocaleString()}</p>
                                                 </td>
                                                 <td>
                                                     <button onClick={() => decrement(i)} className="btn btn-danger m-2">-</button>

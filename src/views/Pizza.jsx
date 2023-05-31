@@ -78,12 +78,15 @@ export default function Pizza() {
                         </dl>
                         <hr />
                         <div className="bottom">
-                            <h3>Precio: ${chosenPizza[0].price}</h3>
+                            <h3>Precio: ${chosenPizza[0].price.toLocaleString()}</h3>
                             <Button className="bAdd" onClick={() => agregarAlCarrito(chosenPizza[0])} id={chosenPizza[0].id} variant="danger">Añadir 🛒</Button>
                         </div>
                     </Card.Body>
+                    <div><Button className="btn btn-secondary" onClick={volverInicio}>Atrás</Button></div>
                 </Card>
-            ) : null}
-        </div>
+
+            ) : null
+            }
+        </div >
     )
 }

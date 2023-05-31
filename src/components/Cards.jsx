@@ -10,7 +10,7 @@ import "../assets/cards.css"
 
 export default function Cards() {
 
-    const { pizzas, prevCarrito, setPrevCarrito, total, setTotal } = useContext(Context);
+    const { pizzas, prevCarrito, setPrevCarrito } = useContext(Context);
     const navigate = useNavigate();
 
     const verDetalle = (e) => {
@@ -30,32 +30,6 @@ export default function Cards() {
             setPrevCarrito([...prevCarrito, producto]);
 
         }
-
-        setTotal(
-            prevCarrito.reduce((a, { price, count }) => a + price * count, price)
-        );
-
-        /* const addToCart = ({ id, price, name, img }) => {
-            const productoEncontradoIndex = prevCarrito.findIndex((p) => p.id === id);
-            const producto = { id, price, name, img, count: 1 };
-            if (productoEncontradoIndex >= 0) {
-                carrito[productoEncontradoIndex].count++;
-                setPrevCarrito([...prevCarrito]);
-            } else {
-                setPrevCarrito([...prevCarrito, producto]);
-            }
-     
-        }; */
-
-
-
-        /* prevCarrito.reduce((a, { count, price }) => a + price * count, itemPizza.price)); */
-
-        /*             prevCarrito.reduce((acum, item) => {
-                        return (acum = acum + item.price);
-                    }, itemPizza.price) */
-
-
 
         console.log("este es el total:" + (total))
     }
