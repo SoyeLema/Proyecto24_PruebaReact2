@@ -1,0 +1,70 @@
+.contenedorMain {
+    margin: 100px 400px;
+    padding: 50px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.contenedorPadre {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    /* border: 1px solid red; */
+}
+
+.contenedorHijo {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+    width: 80%;
+}
+
+.cantidades {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+}
+
+.contenedorItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid greenyellow; */
+    width: 20%;
+}
+
+.nombreItem {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-weight: 500;
+    /* border: 1px solid red; */
+}
+
+.imagenPizza {
+    width: 100px;
+    margin: 5px;
+}
+
+.btn {
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: .5s;
+    border: 1px solid black;
+}
+
+.vaciar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-top: 10px;
+}

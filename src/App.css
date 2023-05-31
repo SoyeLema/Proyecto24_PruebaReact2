@@ -1,0 +1,32 @@
+.pizzass {
+    display: flex;
+    justify-content: center;
+}
+
+.active {
+    color: white;
+    transform: scale(1.05);
+    text-decoration: none;
+    -webkit-text-stroke: .1px white;
+    transition: .5s;
+}
+
+.active:hover {
+    color: orange;
+    -webkit-text-stroke: .25px orange;
+    transition: .5s;
+}
+
+.inactive {
+    color: white;
+    text-decoration: none;
+    -webkit-text-stroke: .1px white;
+    transition: .5s;
+}
+
+.inactive:hover {
+    color: orange;
+    -webkit-text-stroke: .25px orange;
+    transform: scale(1.1);
+    transition: .5s;
+}

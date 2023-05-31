@@ -1,0 +1,79 @@
+.galeria {
+    display: grid;
+    gap: 70px;
+}
+
+.grid-columns-3 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-columns-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.galeria .foto {
+    cursor: pointer;
+    padding: 10px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: left;
+    text-shadow: 0px 0px 15px black;
+}
+
+.galeria .foto:hover {
+    box-shadow: 0px 0px 2px 1px black;
+}
+
+.galeria .foto svg {
+    align-self: flex-end;
+}
+
+.p-3 {
+    padding: 30px;
+}
+
+.titles {
+    font-size: 25px;
+}
+
+dd {
+    text-align: justify;
+    margin-left: 10%;
+}
+
+.prices {
+    text-align: center;
+    font-size: 35px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bVermas {
+    color: white;
+    transition: .5s;
+}
+
+.bVermas:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.bAdd {
+    transition: .5s;
+}
+
+.bAdd:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: .5s;
+}

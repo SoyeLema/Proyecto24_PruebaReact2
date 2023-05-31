@@ -1,0 +1,17 @@
+.banner {
+    height: 35vh;
+    position: relative;
+}
+
+img {
+    position: relative;
+    z-index: 0;
+}
+
+h2 {
+    position: relative;
+    z-index: 0;
+    top: -90%;
+    left: 0;
+
+}
